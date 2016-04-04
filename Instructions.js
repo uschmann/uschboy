@@ -22,4 +22,12 @@ var instructions = {
   '26': require('./instructions/0x26'),
   '2e': require('./instructions/0x2e'),
   'c3': require('./instructions/0xc3'),
+  '78': require('./instructions/0x78'),
+  '79': require('./instructions/0x79'),
+  '7a': require('./instructions/0x7a'),
+  '7b': require('./instructions/0x7b'),
+  '7c': require('./instructions/0x7c'),
+  '7d': require('./instructions/0x7d'),
+  '7e': require('./instructions/0x7e'),
+  '7f': require('./instructions/0x7f'),
 };
