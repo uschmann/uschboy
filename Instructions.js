@@ -44,6 +44,14 @@ var instructions = {
   '55': require('./instructions/0x55'), // ld d, l
   '56': require('./instructions/0x56'), // ld d, [hl]
 
+  '58': require('./instructions/0x58'), // ld e, b
+  '59': require('./instructions/0x59'), // ld e, c
+  '5a': require('./instructions/0x5a'), // ld e, d
+  '5b': require('./instructions/0x5b'), // ld e, e
+  '5c': require('./instructions/0x5c'), // ld e, h
+  '5d': require('./instructions/0x5d'), // ld e, l
+  '5e': require('./instructions/0x5e'), // ld e, [hl]
+
   'c3': require('./instructions/0xc3'), // jp
   '78': require('./instructions/0x78'), // ld a, b
   '79': require('./instructions/0x79'), // ld a, c
