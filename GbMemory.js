@@ -12,8 +12,10 @@ class GbMemory {
 
   loadRom(rom) {
     this.rom = rom;
-    for(var i=0; i<0x8000; i++) {
-      this.data[i] = rom[i];
+    for(var i=0; i<0x8000; i++) { // map bank 0 and bank 1 to memory
+      if(rom[i] !== undefined) {
+          this.data[i] = rom[i];
+      }
     }
   }
 
