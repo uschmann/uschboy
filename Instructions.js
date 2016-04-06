@@ -15,13 +15,20 @@ module.exports = {
 
 var instructions = {
   '00': require('./instructions/0x00'), // nop
+
+  '0a': require('./instructions/0x0a'), // ld a, [bc]
+
   '06': require('./instructions/0x06'), // ld b, n
   '0e': require('./instructions/0x0e'), // ld c, n
   '16': require('./instructions/0x16'), // ld d, n
   '1e': require('./instructions/0x1e'), // ld e, n
+  '1a': require('./instructions/0x1a'), // ld a, [de]
   '26': require('./instructions/0x26'), // ld h, n
   '2e': require('./instructions/0x2e'), // ld l, n
   '36': require('./instructions/0x36'), // ld [hl], n
+
+  '3e': require('./instructions/0x3e'), // ld a, n
+
   '40': require('./instructions/0x40'), // ld b, b
   '41': require('./instructions/0x41'), // ld b, c
   '42': require('./instructions/0x42'), // ld b, d
@@ -82,4 +89,5 @@ var instructions = {
   '7f': require('./instructions/0x7f'), // ld a, a
 
   'c3': require('./instructions/0xc3'), // jp
+  'fa': require('./instructions/0xfa'), // ld a, [nn]
 };
