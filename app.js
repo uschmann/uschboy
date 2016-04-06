@@ -7,13 +7,14 @@ function onLoad(rom) {
   var isDebugging = true;
   var gbCpu = new GbCpu(new GbMemory());
   gbCpu.loadRom(rom);
-  
+
   while(isRunning) {
     console.log(gbCpu.fetchInstruction().disasm(gbCpu));
     gbCpu.step();
 
     if(isDebugging) {
-      var cmd = readlineSync.question('>');
+      var input = readlineSync.question('>').split(' ');
+      var cmd = input[0];
       switch(cmd) {
         case 'regs':
           printRegs(gbCpu);
@@ -24,6 +25,10 @@ function onLoad(rom) {
           break;
         case 'exit':
           isRunning = false;
+          break;
+        case 'show':
+          var addr = Number.parseInt(input[1], 16);
+          console.log(gbCpu.memory.data[addr].toString(16));
           break;
       }
     }
