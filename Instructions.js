@@ -91,6 +91,10 @@ var instructions = {
   '7e': require('./instructions/0x7e'), // ld a, [hl]
   '7f': require('./instructions/0x7f'), // ld a, a
   'c3': require('./instructions/0xc3'), // jp
+  'e0': require('./instructions/0xe0'), // ld [$FF00 + n], a
+  'e2': require('./instructions/0xe2'), // ld [$FF00 + c], a
   'ea': require('./instructions/0xea'), // ld [nn], a
+  'f2': require('./instructions/0xf2'), // ld a, [$FF00 + c]
   'fa': require('./instructions/0xfa'), // ld a, [nn]
+
 };
