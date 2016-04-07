@@ -27,6 +27,7 @@ var instructions = {
   '2e': require('./instructions/0x2e'), // ld l, n
   '36': require('./instructions/0x36'), // ld [hl], n
   '3e': require('./instructions/0x3e'), // ld a, n
+  '3a': require('./instructions/0x3a'), // ld a, [hl-]
   '40': require('./instructions/0x40'), // ld b, b
   '41': require('./instructions/0x41'), // ld b, c
   '42': require('./instructions/0x42'), // ld b, d
