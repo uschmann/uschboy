@@ -15,6 +15,7 @@ module.exports = {
 
 var instructions = {
   '00': require('./instructions/0x00'), // nop
+  '01': require('./instructions/0x01'), // ld bc, nn
   '02': require('./instructions/0x02'), // ld [bc], a
   '0a': require('./instructions/0x0a'), // ld a, [bc]
   '06': require('./instructions/0x06'), // ld b, n
