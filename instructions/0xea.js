@@ -9,6 +9,7 @@ module.exports = {
     return 16;
   },
   disasm(cpu) {
-    return 'ld [nn], a';
+    var addr = cpu.memory.readWord(cpu.regs.pc + 1);
+    return `ld [$${addr.toString(16)}], a`;
   }
 };
