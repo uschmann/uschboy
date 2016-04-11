@@ -20,14 +20,17 @@ var instructions = {
   '0a': require('./instructions/0x0a'), // ld a, [bc]
   '06': require('./instructions/0x06'), // ld b, n
   '0e': require('./instructions/0x0e'), // ld c, n
+  '11': require('./instructions/0x11'), // ld de, nn
   '12': require('./instructions/0x12'), // ld [de], a
   '16': require('./instructions/0x16'), // ld d, n
   '1e': require('./instructions/0x1e'), // ld e, n
   '1a': require('./instructions/0x1a'), // ld a, [de]
+  '21': require('./instructions/0x21'), // ld hl, nn
   '22': require('./instructions/0x22'), // ld [hl+], a
   '26': require('./instructions/0x26'), // ld h, n
   '2a': require('./instructions/0x2a'), // ld a, [hl+]
   '2e': require('./instructions/0x2e'), // ld l, n
+  '31': require('./instructions/0x31'), // ld hl, nn
   '32': require('./instructions/0x32'), // ld [hl-], a
   '36': require('./instructions/0x36'), // ld [hl], n
   '3e': require('./instructions/0x3e'), // ld a, n
