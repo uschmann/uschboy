@@ -38,6 +38,10 @@ class GbCpu {
     return Instructions.get(opcode);
   }
 
+  setCarry() {
+    console.log('setCarry');
+  }
+
   loadRom(rom) {
     this.memory.loadRom(rom);
   }

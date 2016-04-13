@@ -105,5 +105,6 @@ var instructions = {
   'f0': require('./instructions/0xf0'), // ld a, [$FF00+n]
   'f2': require('./instructions/0xf2'), // ld a, [$FF00 + c]
   'fa': require('./instructions/0xfa'), // ld a, [nn]
+  'f8': require('./instructions/0xf8'), // ld hl, sp + n // TODO: check flags
   'f9': require('./instructions/0xf9'), // ld sp, hl
 };
