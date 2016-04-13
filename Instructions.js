@@ -105,4 +105,5 @@ var instructions = {
   'f0': require('./instructions/0xf0'), // ld a, [$FF00+n]
   'f2': require('./instructions/0xf2'), // ld a, [$FF00 + c]
   'fa': require('./instructions/0xfa'), // ld a, [nn]
+  'f9': require('./instructions/0xf9'), // ld sp, hl
 };
