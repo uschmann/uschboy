@@ -19,6 +19,7 @@ var instructions = {
   '02': require('./instructions/0x02'), // ld [bc], a
   '0a': require('./instructions/0x0a'), // ld a, [bc]
   '06': require('./instructions/0x06'), // ld b, n
+  '08': require('./instructions/0x08'), // ld [nn], sp
   '0e': require('./instructions/0x0e'), // ld c, n
   '11': require('./instructions/0x11'), // ld de, nn
   '12': require('./instructions/0x12'), // ld [de], a

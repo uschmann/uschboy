@@ -32,6 +32,12 @@ class GbMemory {
     this.data[addr] = value;
   }
 
+  writeWord(addr, value) {
+    addr &= 0xFFFF;
+    this.writeByte(addr, value & 0xFF);
+    this.writeByte(addr + 1, value >> 8);
+  }
+
 }
 
 module.exports = GbMemory;
