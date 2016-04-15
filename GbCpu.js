@@ -2,6 +2,11 @@
 
 const Instructions = require('./Instructions');
 
+const BIT_CARRY = 4;
+const BIT_HALF_CARRY = 5;
+const BIT_SUBTRACT = 6;
+const BIST_ZERO = 7;
+
 class GbCpu {
 
   constructor(memory) {
@@ -12,7 +17,7 @@ class GbCpu {
   reset() {
     this.regs = {
       a: 0x01,
-      f: 0xB0,
+      f: 0xb0,
       b: 0x00,
       c: 0x13,
       d: 0x00,
@@ -39,7 +44,35 @@ class GbCpu {
   }
 
   setCarry() {
-    console.log('setCarry');
+    this.regs.f |= (1<<BIT_CARRY);
+  }
+
+  resetCarry() {
+    this.regs.f &= (~(1<<BIT_CARRY) & 0xFF);
+  }
+
+  setHalfCarry() {
+    this.regs.f |= (1<<BIT_HALF_CARRY);
+  }
+
+  resetHalfCarry() {
+    this.regs.f &= (~(1<<BIT_HALF_CARRY) & 0xFF);
+  }
+
+  setSubtract() {
+    this.regs.f |= (1<<BIT_SUBTRACT);
+  }
+
+  resetSubtract() {
+    this.regs.f &= (~(1<<BIT_SUBTRACT) & 0xFF);
+  }
+
+  setZero() {
+    this.regs.f |= (1<<BIT_ZERO);
+  }
+
+  resetZero() {
+    this.regs.f &= (~(1<<BIST_ZERO) & 0xFF);
   }
 
   loadRom(rom) {

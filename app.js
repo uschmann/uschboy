@@ -11,7 +11,7 @@ function onLoad(rom) {
   while(isRunning) {
     console.log(gbCpu.fetchInstruction().disasm(gbCpu));
     gbCpu.step();
-
+    
     if(isDebugging) {
       var input = readlineSync.question('>').split(' ');
       var cmd = input[0];
