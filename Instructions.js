@@ -100,11 +100,15 @@ var instructions = {
   '7e': require('./instructions/0x7e'), // ld a, [hl]
   '7f': require('./instructions/0x7f'), // ld a, a
   'c3': require('./instructions/0xc3'), // jp
+  'c5': require('./instructions/0xc5'), // push bc
+  'd5': require('./instructions/0xd5'), // push de
   'e0': require('./instructions/0xe0'), // ld [$FF00 + n], a
   'e2': require('./instructions/0xe2'), // ld [$FF00 + c], a
+  'e5': require('./instructions/0xe5'), // push hl
   'ea': require('./instructions/0xea'), // ld [nn], a
   'f0': require('./instructions/0xf0'), // ld a, [$FF00+n]
   'f2': require('./instructions/0xf2'), // ld a, [$FF00 + c]
+  'f5': require('./instructions/0xf5'), // push af
   'fa': require('./instructions/0xfa'), // ld a, [nn]
   'f8': require('./instructions/0xf8'), // ld hl, sp + n
   'f9': require('./instructions/0xf9'), // ld sp, hl

@@ -11,7 +11,7 @@ function onLoad(rom) {
   while(isRunning) {
     console.log(gbCpu.fetchInstruction().disasm(gbCpu));
     gbCpu.step();
-    
+
     if(isDebugging) {
       var input = readlineSync.question('>').split(' ');
       var cmd = input[0];
@@ -29,6 +29,15 @@ function onLoad(rom) {
         case 'show':
           var addr = Number.parseInt(input[1], 16);
           console.log(gbCpu.memory.data[addr].toString(16));
+          break;
+        case 'stack':
+          var sp = gbCpu.regs.sp;
+          while(sp < 0xfffe) {
+            var str = sp.toString(16) + ' => ';
+            str += gbCpu.memory.readWord(sp).toString(16);
+            console.log(str);
+            sp += 2;
+          }
           break;
       }
     }
