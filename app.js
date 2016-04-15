@@ -9,7 +9,8 @@ function onLoad(rom) {
   gbCpu.loadRom(rom);
 
   while(isRunning) {
-    console.log(gbCpu.fetchInstruction().disasm(gbCpu));
+
+    console.log(`${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}`);
     gbCpu.step();
 
     if(isDebugging) {
