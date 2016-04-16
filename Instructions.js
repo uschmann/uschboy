@@ -99,9 +99,18 @@ var instructions = {
   '7d': require('./instructions/0x7d'), // ld a, l
   '7e': require('./instructions/0x7e'), // ld a, [hl]
   '7f': require('./instructions/0x7f'), // ld a, a
+  '80': require('./instructions/0x80'), // add a, b
+  '81': require('./instructions/0x81'), // add a, c
+  '82': require('./instructions/0x82'), // add a, d
+  '83': require('./instructions/0x83'), // add a, e
+  '84': require('./instructions/0x84'), // add a, h
+  '85': require('./instructions/0x85'), // add a, l
+  '86': require('./instructions/0x86'), // add a, [hl]
+  '87': require('./instructions/0x87'), // add a, a
   'c1': require('./instructions/0xc1'), // pop bc
   'c3': require('./instructions/0xc3'), // jp
   'c5': require('./instructions/0xc5'), // push bc
+  'c6': require('./instructions/0xc6'), // add a, n
   'd1': require('./instructions/0xd1'), // pop de
   'd5': require('./instructions/0xd5'), // push de
   'e0': require('./instructions/0xe0'), // ld [$FF00 + n], a

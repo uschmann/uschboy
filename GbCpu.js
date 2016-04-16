@@ -5,7 +5,7 @@ const Instructions = require('./Instructions');
 const BIT_CARRY = 4;
 const BIT_HALF_CARRY = 5;
 const BIT_SUBTRACT = 6;
-const BIST_ZERO = 7;
+const BIT_ZERO = 7;
 
 class GbCpu {
 
@@ -21,7 +21,7 @@ class GbCpu {
       b: 0x00,
       c: 0x13,
       d: 0x00,
-      e: 0xDB,
+      e: 0xD8,
       h: 0x01,
       l: 0x4D,
       sp: 0xFFFE,
@@ -72,7 +72,7 @@ class GbCpu {
   }
 
   resetZero() {
-    this.regs.f &= (~(1<<BIST_ZERO) & 0xFF);
+    this.regs.f &= (~(1<<BIT_ZERO) & 0xFF);
   }
 
   loadRom(rom) {
