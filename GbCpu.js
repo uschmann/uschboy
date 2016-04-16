@@ -51,12 +51,20 @@ class GbCpu {
     this.regs.f &= (~(1<<BIT_CARRY) & 0xFF);
   }
 
+  isCarry() {
+    return (this.regs.f & (1<<BIT_CARRY)) != 0;
+  }
+
   setHalfCarry() {
     this.regs.f |= (1<<BIT_HALF_CARRY);
   }
 
   resetHalfCarry() {
     this.regs.f &= (~(1<<BIT_HALF_CARRY) & 0xFF);
+  }
+
+  isHalfCarry() {
+    return (this.regs.f & (1<<BIT_HALF_CARRY)) != 0;
   }
 
   setSubtract() {
@@ -67,12 +75,20 @@ class GbCpu {
     this.regs.f &= (~(1<<BIT_SUBTRACT) & 0xFF);
   }
 
+  isSubtract() {
+    return (this.regs.f & (1<<BIT_SUBTRACT)) != 0;
+  }
+
   setZero() {
     this.regs.f |= (1<<BIT_ZERO);
   }
 
   resetZero() {
     this.regs.f &= (~(1<<BIT_ZERO) & 0xFF);
+  }
+
+  isZero() {
+    return (this.regs.f & (1<<BIT_ZERO)) != 0;
   }
 
   loadRom(rom) {

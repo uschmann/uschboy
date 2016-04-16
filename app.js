@@ -6,13 +6,14 @@ function onLoad(rom) {
   var isRunning = true;
   var isDebugging = true;
   var gbCpu = new GbCpu(new GbMemory());
+
   gbCpu.loadRom(rom);
 
   while(isRunning) {
 
     console.log(`${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}`);
     gbCpu.step();
-
+    printRegs(gbCpu);
     if(isDebugging) {
       var input = readlineSync.question('>').split(' ');
       var cmd = input[0];
