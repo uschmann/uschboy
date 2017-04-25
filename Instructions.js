@@ -115,6 +115,16 @@ var instructions = {
   '8d': require('./instructions/0x8d'), // adc a, l
   '8e': require('./instructions/0x8e'), // adc a, [hl]
   '8f': require('./instructions/0x8f'), // adc a, a
+  '90': require('./instructions/0x90'), // sub a, b
+  '91': require('./instructions/0x91'), // sub a, c
+
+  '92': require('./instructions/0x92'), // sub a, d
+  '93': require('./instructions/0x93'), // sub a, e
+  '94': require('./instructions/0x94'), // sub a, h
+  '95': require('./instructions/0x95'), // sub a, l
+  '96': require('./instructions/0x96'), // sub a, [hl]
+
+  '97': require('./instructions/0x97'), // sub a, a
   'c1': require('./instructions/0xc1'), // pop bc
   'c3': require('./instructions/0xc3'), // jp
   'c5': require('./instructions/0xc5'), // push bc
@@ -122,6 +132,7 @@ var instructions = {
   'ce': require('./instructions/0xce'), // adc a, n
   'd1': require('./instructions/0xd1'), // pop de
   'd5': require('./instructions/0xd5'), // push de
+  'd6': require('./instructions/0xd6'), // sub a, #
   'e0': require('./instructions/0xe0'), // ld [$FF00 + n], a
   'e1': require('./instructions/0xe1'), // pop hl
   'e2': require('./instructions/0xe2'), // ld [$FF00 + c], a
