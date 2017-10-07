@@ -17,7 +17,6 @@ module.exports = {
     return 4;
   },
   disasm(cpu) {
-    const value = cpu.memory.readByte(cpu.regs.pc+1);
     return `sub a, b`;
   }
 };

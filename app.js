@@ -8,7 +8,7 @@ function onLoad(rom) {
   var gbCpu = new GbCpu(new GbMemory());
 
   gbCpu.loadRom(rom);
-
+  var i = 0;
   while(isRunning) {
 
     console.log(`${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}`);
@@ -53,6 +53,12 @@ function printRegs(gbCpu) {
         console.log(reg + ' = ' + gbCpu.regs[reg].toString(16));
     }
   }
+  console.log('------');
+  console.log(`z: ${gbCpu.isZero()}`);
+  console.log(`n: ${gbCpu.isSubtract()}`);
+  console.log(`h: ${gbCpu.isHalfCarry()}`);
+  console.log(`c: ${gbCpu.isCarry()}`);
+  console.log('------');
 }
 
 var fs = require('fs');
