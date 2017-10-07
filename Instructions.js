@@ -123,7 +123,6 @@ var instructions = {
   '95': require('./instructions/0x95'), // sub a, l
   '96': require('./instructions/0x96'), // sub a, [hl]
   '97': require('./instructions/0x97'), // sub a, a
-
   '9f': require('./instructions/0x9f'), // sbc a, a
   '98': require('./instructions/0x98'), // sbc a, b
   '99': require('./instructions/0x99'), // sbc a, c
@@ -133,6 +132,14 @@ var instructions = {
   '9d': require('./instructions/0x9d'), // sbc a, l
   '9e': require('./instructions/0x9e'), // sbc a, [hl]
 
+  'a0': require('./instructions/0xa0'), // and b
+  'a1': require('./instructions/0xa1'), // and c
+  'a2': require('./instructions/0xa2'), // and d
+  'a3': require('./instructions/0xa3'), // and e
+  'a4': require('./instructions/0xa4'), // and h
+  'a5': require('./instructions/0xa5'), // and l
+  'a6': require('./instructions/0xa6'), // and [hl]
+  'a7': require('./instructions/0xa7'), // and a
 
   'c1': require('./instructions/0xc1'), // pop bc
   'c3': require('./instructions/0xc3'), // jp
@@ -147,6 +154,7 @@ var instructions = {
   'e1': require('./instructions/0xe1'), // pop hl
   'e2': require('./instructions/0xe2'), // ld [$FF00 + c], a
   'e5': require('./instructions/0xe5'), // push hl
+  'e6': require('./instructions/0xe6'), // and #
   'ea': require('./instructions/0xea'), // ld [nn], a
   'f0': require('./instructions/0xf0'), // ld a, [$FF00+n]
   'f1': require('./instructions/0xf1'), // pop af
