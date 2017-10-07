@@ -17,25 +17,37 @@ var instructions = {
   '00': require('./instructions/0x00'), // nop
   '01': require('./instructions/0x01'), // ld bc, nn
   '02': require('./instructions/0x02'), // ld [bc], a
+
+  '04': require('./instructions/0x04'), // inc b
+
   '0a': require('./instructions/0x0a'), // ld a, [bc]
   '06': require('./instructions/0x06'), // ld b, n
   '08': require('./instructions/0x08'), // ld [nn], sp
+  '0c': require('./instructions/0x0c'), // inc c
   '0e': require('./instructions/0x0e'), // ld c, n
   '11': require('./instructions/0x11'), // ld de, nn
   '12': require('./instructions/0x12'), // ld [de], a
+  '14': require('./instructions/0x14'), // inc d
   '16': require('./instructions/0x16'), // ld d, n
   '1e': require('./instructions/0x1e'), // ld e, n
   '1a': require('./instructions/0x1a'), // ld a, [de]
+  '1c': require('./instructions/0x1c'), // inc e
   '21': require('./instructions/0x21'), // ld hl, nn
   '22': require('./instructions/0x22'), // ld [hl+], a
+  '24': require('./instructions/0x24'), // inc h
   '26': require('./instructions/0x26'), // ld h, n
   '2a': require('./instructions/0x2a'), // ld a, [hl+]
+  '2c': require('./instructions/0x2c'), // inc l
   '2e': require('./instructions/0x2e'), // ld l, n
   '31': require('./instructions/0x31'), // ld hl, nn
   '32': require('./instructions/0x32'), // ld [hl-], a
+  '34': require('./instructions/0x34'), // inc [hl]
   '36': require('./instructions/0x36'), // ld [hl], n
   '3e': require('./instructions/0x3e'), // ld a, n
   '3a': require('./instructions/0x3a'), // ld a, [hl-]
+
+  '3c': require('./instructions/0x3c'), // inc a
+
   '40': require('./instructions/0x40'), // ld b, b
   '41': require('./instructions/0x41'), // ld b, c
   '42': require('./instructions/0x42'), // ld b, d
@@ -139,7 +151,6 @@ var instructions = {
   'a5': require('./instructions/0xa5'), // and l
   'a6': require('./instructions/0xa6'), // and [hl]
   'a7': require('./instructions/0xa7'), // and a
-
   'a8': require('./instructions/0xa8'), // xor b
   'a9': require('./instructions/0xa9'), // xor c
   'aa': require('./instructions/0xaa'), // xor d
@@ -148,7 +159,6 @@ var instructions = {
   'ad': require('./instructions/0xad'), // xor l
   'ae': require('./instructions/0xae'), // xor [hl]
   'af': require('./instructions/0xaf'), // xor a
-
   'b0': require('./instructions/0xb0'), // or b
   'b1': require('./instructions/0xb1'), // or c
   'b2': require('./instructions/0xb2'), // or d
@@ -157,7 +167,6 @@ var instructions = {
   'b5': require('./instructions/0xb5'), // or l
   'b6': require('./instructions/0xb6'), // or [hl]
   'b7': require('./instructions/0xb7'), // or a
-
   'b8': require('./instructions/0xb8'), // cp b
   'b9': require('./instructions/0xb9'), // cp c
   'ba': require('./instructions/0xba'), // cp d
@@ -166,7 +175,6 @@ var instructions = {
   'bd': require('./instructions/0xbd'), // cp l
   'be': require('./instructions/0xbe'), // cp [hl]
   'bf': require('./instructions/0xbf'), // cp a
-
   'c1': require('./instructions/0xc1'), // pop bc
   'c3': require('./instructions/0xc3'), // jp
   'c5': require('./instructions/0xc5'), // push bc
