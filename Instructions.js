@@ -157,6 +157,16 @@ var instructions = {
   'b5': require('./instructions/0xb5'), // or l
   'b6': require('./instructions/0xb6'), // or [hl]
   'b7': require('./instructions/0xb7'), // or a
+
+  'b8': require('./instructions/0xb8'), // cp b
+  'b9': require('./instructions/0xb9'), // cp c
+  'ba': require('./instructions/0xba'), // cp d
+  'bb': require('./instructions/0xbb'), // cp e
+  'bc': require('./instructions/0xbc'), // cp h
+  'bd': require('./instructions/0xbd'), // cp l
+  'be': require('./instructions/0xbe'), // cp [hl]
+  'bf': require('./instructions/0xbf'), // cp a
+
   'c1': require('./instructions/0xc1'), // pop bc
   'c3': require('./instructions/0xc3'), // jp
   'c5': require('./instructions/0xc5'), // push bc
@@ -181,4 +191,5 @@ var instructions = {
   'f6': require('./instructions/0xf6'), // or #
   'f8': require('./instructions/0xf8'), // ld hl, sp + n
   'f9': require('./instructions/0xf9'), // ld sp, hl
+  'fe': require('./instructions/0xfe'), // cp #
 };
