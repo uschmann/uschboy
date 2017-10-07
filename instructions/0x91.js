@@ -7,7 +7,7 @@ module.exports = {
     const result = (cpu.regs.a - value) & 0xFF;
 
     result == 0 ? cpu.setZero() : cpu.resetZero();
-    value > (cpu.regs.a & 0xF0) ? cpu.setCarry() : cpu.resetCarry();
+    cpu.regs.a < value ? cpu.setCarry() : cpu.resetCarry();
     (value & 0x0F) > (cpu.regs.a & 0x0F) ? cpu.setHalfCarry() : cpu.resetHalfCarry();
     cpu.setSubtract();
 

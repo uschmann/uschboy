@@ -7,7 +7,7 @@ module.exports = {
     const result = (cpu.regs.a - value) & 0xFF;
 
     result == 0 ? cpu.setZero() : cpu.resetZero();
-    value > (cpu.regs.a & 0xF0) ? cpu.setCarry() : cpu.resetCarry();
+    cpu.regs.a < value ? cpu.setCarry() : cpu.resetCarry();
     (value & 0x0F) > (cpu.regs.a & 0x0F) ? cpu.setHalfCarry() : cpu.resetHalfCarry();
     cpu.setSubtract();
 
@@ -18,6 +18,6 @@ module.exports = {
   },
   disasm(cpu) {
     const value = cpu.memory.readByte(cpu.regs.pc+1);
-    return `sub a, $${value}`;
+    return `sub a, $${value.toString(16)}`;
   }
 };
