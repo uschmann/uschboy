@@ -140,6 +140,14 @@ var instructions = {
   'a6': require('./instructions/0xa6'), // and [hl]
   'a7': require('./instructions/0xa7'), // and a
 
+  'a8': require('./instructions/0xa8'), // xor b
+  'a9': require('./instructions/0xa9'), // xor c
+  'aa': require('./instructions/0xaa'), // xor d
+  'ab': require('./instructions/0xab'), // xor e
+  'ac': require('./instructions/0xac'), // xor h
+  'ad': require('./instructions/0xad'), // xor l
+  'ae': require('./instructions/0xae'), // xor [hl]
+  'af': require('./instructions/0xaf'), // xor a
 
   'b0': require('./instructions/0xb0'), // or b
   'b1': require('./instructions/0xb1'), // or c
@@ -149,7 +157,6 @@ var instructions = {
   'b5': require('./instructions/0xb5'), // or l
   'b6': require('./instructions/0xb6'), // or [hl]
   'b7': require('./instructions/0xb7'), // or a
-
   'c1': require('./instructions/0xc1'), // pop bc
   'c3': require('./instructions/0xc3'), // jp
   'c5': require('./instructions/0xc5'), // push bc
@@ -165,6 +172,7 @@ var instructions = {
   'e5': require('./instructions/0xe5'), // push hl
   'e6': require('./instructions/0xe6'), // and #
   'ea': require('./instructions/0xea'), // ld [nn], a
+  'ee': require('./instructions/0xee'), // xor #
   'f0': require('./instructions/0xf0'), // ld a, [$FF00+n]
   'f1': require('./instructions/0xf1'), // pop af
   'f2': require('./instructions/0xf2'), // ld a, [$FF00 + c]
