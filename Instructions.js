@@ -17,37 +17,41 @@ var instructions = {
   '00': require('./instructions/0x00'), // nop
   '01': require('./instructions/0x01'), // ld bc, nn
   '02': require('./instructions/0x02'), // ld [bc], a
-
   '04': require('./instructions/0x04'), // inc b
-
-  '0a': require('./instructions/0x0a'), // ld a, [bc]
+  '05': require('./instructions/0x05'), // dec b
   '06': require('./instructions/0x06'), // ld b, n
   '08': require('./instructions/0x08'), // ld [nn], sp
+  '0a': require('./instructions/0x0a'), // ld a, [bc]
   '0c': require('./instructions/0x0c'), // inc c
+  '0d': require('./instructions/0x0d'), // dec c
   '0e': require('./instructions/0x0e'), // ld c, n
   '11': require('./instructions/0x11'), // ld de, nn
   '12': require('./instructions/0x12'), // ld [de], a
   '14': require('./instructions/0x14'), // inc d
+  '15': require('./instructions/0x15'), // dec d
   '16': require('./instructions/0x16'), // ld d, n
   '1e': require('./instructions/0x1e'), // ld e, n
   '1a': require('./instructions/0x1a'), // ld a, [de]
   '1c': require('./instructions/0x1c'), // inc e
+  '1d': require('./instructions/0x1d'), // dec e
   '21': require('./instructions/0x21'), // ld hl, nn
   '22': require('./instructions/0x22'), // ld [hl+], a
   '24': require('./instructions/0x24'), // inc h
+  '25': require('./instructions/0x25'), // dec h
   '26': require('./instructions/0x26'), // ld h, n
   '2a': require('./instructions/0x2a'), // ld a, [hl+]
   '2c': require('./instructions/0x2c'), // inc l
+  '2d': require('./instructions/0x2d'), // dec l
   '2e': require('./instructions/0x2e'), // ld l, n
   '31': require('./instructions/0x31'), // ld hl, nn
   '32': require('./instructions/0x32'), // ld [hl-], a
   '34': require('./instructions/0x34'), // inc [hl]
+  '35': require('./instructions/0x35'), // dec [hl]
   '36': require('./instructions/0x36'), // ld [hl], n
   '3e': require('./instructions/0x3e'), // ld a, n
   '3a': require('./instructions/0x3a'), // ld a, [hl-]
-
   '3c': require('./instructions/0x3c'), // inc a
-
+  '3d': require('./instructions/0x3d'), // dec a
   '40': require('./instructions/0x40'), // ld b, b
   '41': require('./instructions/0x41'), // ld b, c
   '42': require('./instructions/0x42'), // ld b, d
