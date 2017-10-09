@@ -199,6 +199,7 @@ var instructions = {
   'e2': require('./instructions/0xe2'), // ld [$FF00 + c], a
   'e5': require('./instructions/0xe5'), // push hl
   'e6': require('./instructions/0xe6'), // and #
+  'e8': require('./instructions/0xe8'), // add sp, n
   'ea': require('./instructions/0xea'), // ld [nn], a
   'ee': require('./instructions/0xee'), // xor #
   'f0': require('./instructions/0xf0'), // ld a, [$FF00+n]
