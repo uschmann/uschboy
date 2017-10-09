@@ -10,6 +10,17 @@ module.exports = {
       throw 'Unknown upcode: ' + key;
     }
     return instructions[key];
+  },
+
+  getExtended(opcode) {
+    var key = opcode.toString(16);
+    if(key.length % 2 != 0) {
+      key = '0' + key;
+    }
+    if(!extendedInstructions[key]) {
+      throw 'Unknown upcode: cb' + key;
+    }
+    return extendedInstructions[key];
   }
 }
 
@@ -22,9 +33,7 @@ var instructions = {
   '05': require('./instructions/0x05'), // dec b
   '06': require('./instructions/0x06'), // ld b, n
   '08': require('./instructions/0x08'), // ld [nn], sp
-
   '09': require('./instructions/0x09'), // add hl, bc
-
   '0a': require('./instructions/0x0a'), // ld a, [bc]
   '0b': require('./instructions/0x0b'), // dec bc
   '0c': require('./instructions/0x0c'), // inc c
@@ -219,4 +228,15 @@ var instructions = {
   'f8': require('./instructions/0xf8'), // ld hl, sp + n
   'f9': require('./instructions/0xf9'), // ld sp, hl
   'fe': require('./instructions/0xfe'), // cp #
+};
+
+var extendedInstructions = {
+  '30': require('./instructions/0xcb30'), // swap b
+  '31': require('./instructions/0xcb31'), // swap c
+  '32': require('./instructions/0xcb32'), // swap d
+  '33': require('./instructions/0xcb33'), // swap e
+  '34': require('./instructions/0xcb34'), // swap h
+  '35': require('./instructions/0xcb35'), // swap l
+  '36': require('./instructions/0xcb36'), // swap [hl]
+  '37': require('./instructions/0xcb37'), // swap a
 };

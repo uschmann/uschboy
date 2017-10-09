@@ -40,6 +40,10 @@ class GbCpu {
 
   fetchInstruction() {
     var opcode = this.memory.readByte(this.regs.pc);
+    if(opcode == 0xCB) {
+      opcode = this.memory.readByte(this.regs.pc + 1);
+      return Instructions.getExtended(opcode);
+    }
     return Instructions.get(opcode);
   }
 
