@@ -39,6 +39,7 @@ var instructions = {
   '0c': require('./instructions/0x0c'), // inc c
   '0d': require('./instructions/0x0d'), // dec c
   '0e': require('./instructions/0x0e'), // ld c, n
+  '10': require('./instructions/0x10'), // stop
   '11': require('./instructions/0x11'), // ld de, nn
   '12': require('./instructions/0x12'), // ld [de], a
   '13': require('./instructions/0x13'), // inc de
@@ -133,6 +134,7 @@ var instructions = {
   '73': require('./instructions/0x73'), // ld [hl], e
   '74': require('./instructions/0x74'), // ld [hl], h
   '75': require('./instructions/0x75'), // ld [hl], l
+  '76': require('./instructions/0x76'), // halt
   '77': require('./instructions/0x77'), // ld [hl], a
   '78': require('./instructions/0x78'), // ld a, b
   '79': require('./instructions/0x79'), // ld a, c
@@ -226,11 +228,13 @@ var instructions = {
   'f0': require('./instructions/0xf0'), // ld a, [$FF00+n]
   'f1': require('./instructions/0xf1'), // pop af
   'f2': require('./instructions/0xf2'), // ld a, [$FF00 + c]
+  'f3': require('./instructions/0xf3'), // di
   'f5': require('./instructions/0xf5'), // push af
   'fa': require('./instructions/0xfa'), // ld a, [nn]
   'f6': require('./instructions/0xf6'), // or #
   'f8': require('./instructions/0xf8'), // ld hl, sp + n
   'f9': require('./instructions/0xf9'), // ld sp, hl
+  'fb': require('./instructions/0xfb'), // ei
   'fe': require('./instructions/0xfe'), // cp #
 };
 
