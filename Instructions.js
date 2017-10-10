@@ -243,6 +243,14 @@ var instructions = {
 };
 
 var extendedInstructions = {
+  '00': require('./instructions/0xcb00'), // rlc b
+  '01': require('./instructions/0xcb01'), // rlc c
+  '02': require('./instructions/0xcb02'), // rlc d
+  '03': require('./instructions/0xcb03'), // rlc e
+  '04': require('./instructions/0xcb04'), // rlc h
+  '05': require('./instructions/0xcb05'), // rlc l
+  '06': require('./instructions/0xcb06'), // rlc [hl]
+  '07': require('./instructions/0xcb07'), // rlc a
   '30': require('./instructions/0xcb30'), // swap b
   '31': require('./instructions/0xcb31'), // swap c
   '32': require('./instructions/0xcb32'), // swap d
