@@ -1,7 +1,7 @@
 module.exports = {
   name: 'swap [hl]',
   opcode: 'cb36',
-  cycles: 15,
+  cycles: 16,
   execute(cpu) {
     var addr = (cpu.regs.h << 8) | cpu.regs.l;
     var tmp = cpu.memory.readByte(addr);
@@ -14,7 +14,7 @@ module.exports = {
     cpu.resetCarry();
 
     cpu.regs.pc = (cpu.regs.pc + 2) & 0xFFFF;
-    return 8;
+    return 16;
   },
   disasm(cpu) {
     return 'swap [hl]';

@@ -57,6 +57,7 @@ var instructions = {
   '24': require('./instructions/0x24'), // inc h
   '25': require('./instructions/0x25'), // dec h
   '26': require('./instructions/0x26'), // ld h, n
+  '27': require('./instructions/0x27'), // daa
   '29': require('./instructions/0x29'), // add hl, hl
   '2a': require('./instructions/0x2a'), // ld a, [hl+]
   '2b': require('./instructions/0x2b'), // dec hl
