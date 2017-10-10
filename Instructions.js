@@ -71,6 +71,7 @@ var instructions = {
   '34': require('./instructions/0x34'), // inc [hl]
   '35': require('./instructions/0x35'), // dec [hl]
   '36': require('./instructions/0x36'), // ld [hl], n
+  '37': require('./instructions/0x37'), // scf
   '39': require('./instructions/0x39'), // add hl, sp
   '3e': require('./instructions/0x3e'), // ld a, n
   '3a': require('./instructions/0x3a'), // ld a, [hl-]
