@@ -64,6 +64,7 @@ var instructions = {
   '2c': require('./instructions/0x2c'), // inc l
   '2d': require('./instructions/0x2d'), // dec l
   '2e': require('./instructions/0x2e'), // ld l, n
+  '2f': require('./instructions/0x2f'), // cpl
   '31': require('./instructions/0x31'), // ld hl, nn
   '32': require('./instructions/0x32'), // ld [hl-], a
   '33': require('./instructions/0x33'), // inc sp
