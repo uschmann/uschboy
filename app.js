@@ -2,6 +2,9 @@ var readlineSync = require('readline-sync');
 const GbCpu = require('./GbCpu');
 const GbMemory = require('./GbMemory');
 
+const filename = process.argv.length > 2 ? process.argv[2] : '../dmg-start/build/main.gb';
+console.log(filename);
+
 function onLoad(rom) {
   var isRunning = true;
   var isDebugging = true;
@@ -63,7 +66,7 @@ function printRegs(gbCpu) {
 
 var fs = require('fs');
 
-fs.readFile('../dmg-start/build/main.gb', function(status, data) {
+fs.readFile(filename, function(status, data) {
     if (status) {
         console.log(status.message);
         return;

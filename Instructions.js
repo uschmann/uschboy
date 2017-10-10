@@ -77,6 +77,7 @@ var instructions = {
   '3b': require('./instructions/0x3b'), // dec sp
   '3c': require('./instructions/0x3c'), // inc a
   '3d': require('./instructions/0x3d'), // dec a
+  '3f': require('./instructions/0x3f'), // ccf
   '40': require('./instructions/0x40'), // ld b, b
   '41': require('./instructions/0x41'), // ld b, c
   '42': require('./instructions/0x42'), // ld b, d
