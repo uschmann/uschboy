@@ -251,6 +251,17 @@ var extendedInstructions = {
   '05': require('./instructions/0xcb05'), // rlc l
   '06': require('./instructions/0xcb06'), // rlc [hl]
   '07': require('./instructions/0xcb07'), // rlc a
+
+  '08': require('./instructions/0xcb08'), // rrc b
+  '09': require('./instructions/0xcb09'), // rrc c
+  '0a': require('./instructions/0xcb0a'), // rrc d
+  '0b': require('./instructions/0xcb0b'), // rrc e
+  '0c': require('./instructions/0xcb0c'), // rrc h
+  '0d': require('./instructions/0xcb0d'), // rrc l
+  '0e': require('./instructions/0xcb0e'), // rrc [hl]
+
+  '0f': require('./instructions/0xcb0f'), // rrc a
+
   '10': require('./instructions/0xcb10'), // rl b
   '11': require('./instructions/0xcb11'), // rl c
   '12': require('./instructions/0xcb12'), // rl d
@@ -259,7 +270,6 @@ var extendedInstructions = {
   '15': require('./instructions/0xcb15'), // rl l
   '16': require('./instructions/0xcb16'), // rl [hl]
   '17': require('./instructions/0xcb17'), // rl a
-
   '18': require('./instructions/0xcb18'), // rr b
   '19': require('./instructions/0xcb19'), // rr c
   '1a': require('./instructions/0xcb1a'), // rr d
@@ -267,9 +277,7 @@ var extendedInstructions = {
   '1c': require('./instructions/0xcb1c'), // rr h
   '1d': require('./instructions/0xcb1d'), // rr l
   '1e': require('./instructions/0xcb1e'), // rr [hl]
-
   '1f': require('./instructions/0xcb1f'), // rr a
-
   '30': require('./instructions/0xcb30'), // swap b
   '31': require('./instructions/0xcb31'), // swap c
   '32': require('./instructions/0xcb32'), // swap d
