@@ -251,6 +251,14 @@ var extendedInstructions = {
   '05': require('./instructions/0xcb05'), // rlc l
   '06': require('./instructions/0xcb06'), // rlc [hl]
   '07': require('./instructions/0xcb07'), // rlc a
+  '10': require('./instructions/0xcb10'), // rl b
+  '11': require('./instructions/0xcb11'), // rl c
+  '12': require('./instructions/0xcb12'), // rl d
+  '13': require('./instructions/0xcb13'), // rl e
+  '14': require('./instructions/0xcb14'), // rl h
+  '15': require('./instructions/0xcb15'), // rl l
+  '16': require('./instructions/0xcb16'), // rl [hl]
+  '17': require('./instructions/0xcb17'), // rl a
   '30': require('./instructions/0xcb30'), // swap b
   '31': require('./instructions/0xcb31'), // swap c
   '32': require('./instructions/0xcb32'), // swap d
