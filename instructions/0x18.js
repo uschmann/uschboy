@@ -8,7 +8,7 @@ module.exports = {
     var n = MathHelper.toSignedValue(cpu.memory.readByte(cpu.regs.pc + 1));
     cpu.regs.pc = (cpu.regs.pc + 2 + n) & 0xFFFF;
 
-    return 9;
+    return 8;
   },
   disasm(cpu) {
     return 'jr n'

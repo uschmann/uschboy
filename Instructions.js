@@ -57,6 +57,7 @@ var instructions = {
   '1b': require('./instructions/0x1b'), // dec de
   '1c': require('./instructions/0x1c'), // inc e
   '1d': require('./instructions/0x1d'), // dec e
+  '20': require('./instructions/0x20'), // jr nz, n
   '21': require('./instructions/0x21'), // ld hl, nn
   '22': require('./instructions/0x22'), // ld [hl+], a
   '23': require('./instructions/0x23'), // inc hl
@@ -64,6 +65,7 @@ var instructions = {
   '25': require('./instructions/0x25'), // dec h
   '26': require('./instructions/0x26'), // ld h, n
   '27': require('./instructions/0x27'), // daa
+  '28': require('./instructions/0x28'), // jr z, n
   '29': require('./instructions/0x29'), // add hl, hl
   '2a': require('./instructions/0x2a'), // ld a, [hl+]
   '2b': require('./instructions/0x2b'), // dec hl
@@ -71,6 +73,7 @@ var instructions = {
   '2d': require('./instructions/0x2d'), // dec l
   '2e': require('./instructions/0x2e'), // ld l, n
   '2f': require('./instructions/0x2f'), // cpl
+  '30': require('./instructions/0x30'), // jr nc, n
   '31': require('./instructions/0x31'), // ld hl, nn
   '32': require('./instructions/0x32'), // ld [hl-], a
   '33': require('./instructions/0x33'), // inc sp
@@ -78,6 +81,7 @@ var instructions = {
   '35': require('./instructions/0x35'), // dec [hl]
   '36': require('./instructions/0x36'), // ld [hl], n
   '37': require('./instructions/0x37'), // scf
+  '38': require('./instructions/0x38'), // jr c, n
   '39': require('./instructions/0x39'), // add hl, sp
   '3e': require('./instructions/0x3e'), // ld a, n
   '3a': require('./instructions/0x3a'), // ld a, [hl-]
