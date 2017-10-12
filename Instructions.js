@@ -213,13 +213,17 @@ var instructions = {
   'be': require('./instructions/0xbe'), // cp [hl]
   'bf': require('./instructions/0xbf'), // cp a
   'c1': require('./instructions/0xc1'), // pop bc
+  'c2': require('./instructions/0xc2'), // jp nz, nn
   'c3': require('./instructions/0xc3'), // jp
   'c5': require('./instructions/0xc5'), // push bc
   'c6': require('./instructions/0xc6'), // add a, n
+  'ca': require('./instructions/0xca'), // jp z, nn
   'ce': require('./instructions/0xce'), // adc a, n
   'd1': require('./instructions/0xd1'), // pop de
+  'd2': require('./instructions/0xd2'), // jp nc, nn
   'd5': require('./instructions/0xd5'), // push de
   'd6': require('./instructions/0xd6'), // sub a, #
+  'da': require('./instructions/0xda'), // jp c, nn
   'de': require('./instructions/0xde'), // sbc a, #
   'e0': require('./instructions/0xe0'), // ld [$FF00 + n], a
   'e1': require('./instructions/0xe1'), // pop hl
