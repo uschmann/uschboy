@@ -223,28 +223,34 @@ var instructions = {
   'c4': require('./instructions/0xc4'), // call nz, nn
   'c5': require('./instructions/0xc5'), // push bc
   'c6': require('./instructions/0xc6'), // add a, n
+  'c7': require('./instructions/0xc7'), // rst 00
   'c9': require('./instructions/0xc9'), // ret
   'ca': require('./instructions/0xca'), // jp z, nn
   'cc': require('./instructions/0xcc'), // call z, nn
   'cd': require('./instructions/0xcd'), // call nn
   'ce': require('./instructions/0xce'), // adc a, n
+  'cf': require('./instructions/0xcf'), // rst 08
   'd1': require('./instructions/0xd1'), // pop de
   'd2': require('./instructions/0xd2'), // jp nc, nn
   'd4': require('./instructions/0xd4'), // call nc, nn
   'd5': require('./instructions/0xd5'), // push de
   'd6': require('./instructions/0xd6'), // sub a, #
+  'd7': require('./instructions/0xd7'), // rst 10
   'da': require('./instructions/0xda'), // jp c, nn
   'dc': require('./instructions/0xdc'), // call c, nn
   'de': require('./instructions/0xde'), // sbc a, #
+  'df': require('./instructions/0xdf'), // rst 18
   'e0': require('./instructions/0xe0'), // ld [$FF00 + n], a
   'e1': require('./instructions/0xe1'), // pop hl
   'e2': require('./instructions/0xe2'), // ld [$FF00 + c], a
   'e5': require('./instructions/0xe5'), // push hl
   'e6': require('./instructions/0xe6'), // and #
+  'e7': require('./instructions/0xe7'), // rst 20
   'e8': require('./instructions/0xe8'), // add sp, n
   'e9': require('./instructions/0xe9'), // jp [hl]
   'ea': require('./instructions/0xea'), // ld [nn], a
   'ee': require('./instructions/0xee'), // xor #
+  'ef': require('./instructions/0xef'), // rst 28
   'f0': require('./instructions/0xf0'), // ld a, [$FF00+n]
   'f1': require('./instructions/0xf1'), // pop af
   'f2': require('./instructions/0xf2'), // ld a, [$FF00 + c]
@@ -252,10 +258,12 @@ var instructions = {
   'f5': require('./instructions/0xf5'), // push af
   'fa': require('./instructions/0xfa'), // ld a, [nn]
   'f6': require('./instructions/0xf6'), // or #
+  'f7': require('./instructions/0xf7'), // rst 30
   'f8': require('./instructions/0xf8'), // ld hl, sp + n
   'f9': require('./instructions/0xf9'), // ld sp, hl
   'fb': require('./instructions/0xfb'), // ei
   'fe': require('./instructions/0xfe'), // cp #
+  'ff': require('./instructions/0xff'), // rst 38
 };
 
 var extendedInstructions = {
