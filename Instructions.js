@@ -217,6 +217,7 @@ var instructions = {
   'bd': require('./instructions/0xbd'), // cp l
   'be': require('./instructions/0xbe'), // cp [hl]
   'bf': require('./instructions/0xbf'), // cp a
+  'c0': require('./instructions/0xc0'), // ret nz
   'c1': require('./instructions/0xc1'), // pop bc
   'c2': require('./instructions/0xc2'), // jp nz, nn
   'c3': require('./instructions/0xc3'), // jp
@@ -224,18 +225,21 @@ var instructions = {
   'c5': require('./instructions/0xc5'), // push bc
   'c6': require('./instructions/0xc6'), // add a, n
   'c7': require('./instructions/0xc7'), // rst 00
+  'c8': require('./instructions/0xc8'), // ret z
   'c9': require('./instructions/0xc9'), // ret
   'ca': require('./instructions/0xca'), // jp z, nn
   'cc': require('./instructions/0xcc'), // call z, nn
   'cd': require('./instructions/0xcd'), // call nn
   'ce': require('./instructions/0xce'), // adc a, n
   'cf': require('./instructions/0xcf'), // rst 08
+  'd0': require('./instructions/0xd0'), // ret nc
   'd1': require('./instructions/0xd1'), // pop de
   'd2': require('./instructions/0xd2'), // jp nc, nn
   'd4': require('./instructions/0xd4'), // call nc, nn
   'd5': require('./instructions/0xd5'), // push de
   'd6': require('./instructions/0xd6'), // sub a, #
   'd7': require('./instructions/0xd7'), // rst 10
+  'd8': require('./instructions/0xd8'), // ret c
   'da': require('./instructions/0xda'), // jp c, nn
   'dc': require('./instructions/0xdc'), // call c, nn
   'de': require('./instructions/0xde'), // sbc a, #
@@ -323,7 +327,6 @@ var extendedInstructions = {
   '35': require('./instructions/0xcb35'), // swap l
   '36': require('./instructions/0xcb36'), // swap [hl]
   '37': require('./instructions/0xcb37'), // swap a
-
   '38': require('./instructions/0xcb38'), // srl b
   '39': require('./instructions/0xcb39'), // srl c
   '3a': require('./instructions/0xcb3a'), // srl d
@@ -331,6 +334,5 @@ var extendedInstructions = {
   '3c': require('./instructions/0xcb3c'), // srl h
   '3d': require('./instructions/0xcb3d'), // srl l
   '3e': require('./instructions/0xcb3e'), // srl [hl]
-
   '3f': require('./instructions/0xcb3f'), // srl a
 };
