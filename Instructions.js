@@ -49,6 +49,7 @@ var instructions = {
   '15': require('./instructions/0x15'), // dec d
   '16': require('./instructions/0x16'), // ld d, n
   '17': require('./instructions/0x17'), // rla
+  '18': require('./instructions/0x18'), // jpr n
   '19': require('./instructions/0x19'), // add hl, de
   '1e': require('./instructions/0x1e'), // ld e, n
   '1f': require('./instructions/0x1f'), // rra
