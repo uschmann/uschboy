@@ -240,6 +240,7 @@ var instructions = {
   'd6': require('./instructions/0xd6'), // sub a, #
   'd7': require('./instructions/0xd7'), // rst 10
   'd8': require('./instructions/0xd8'), // ret c
+  'd9': require('./instructions/0xd9'), // reti
   'da': require('./instructions/0xda'), // jp c, nn
   'dc': require('./instructions/0xdc'), // call c, nn
   'de': require('./instructions/0xde'), // sbc a, #
