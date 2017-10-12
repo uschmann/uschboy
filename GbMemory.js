@@ -20,6 +20,10 @@ class GbMemory {
   }
 
   readByte(addr) {
+    if(addr == 0xff44) {
+      return 0x94;
+    }
+
     return this.data[addr];
   }
 

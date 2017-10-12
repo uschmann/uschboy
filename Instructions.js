@@ -222,7 +222,9 @@ var instructions = {
   'c3': require('./instructions/0xc3'), // jp
   'c5': require('./instructions/0xc5'), // push bc
   'c6': require('./instructions/0xc6'), // add a, n
+  'c9': require('./instructions/0xc9'), // ret
   'ca': require('./instructions/0xca'), // jp z, nn
+  'cd': require('./instructions/0xcd'), // call nn
   'ce': require('./instructions/0xce'), // adc a, n
   'd1': require('./instructions/0xd1'), // pop de
   'd2': require('./instructions/0xd2'), // jp nc, nn

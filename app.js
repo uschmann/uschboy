@@ -44,7 +44,16 @@ function onLoad(rom) {
             sp += 2;
           }
           break;
+        case 'dump':
+          for(var i = 0x8000; i < 0x8010; i++) {
+              console.log(i.toString(16) + ' : ' + gbCpu.memory.readByte(i).toString(16));
+          }
+          break;
       }
+    }
+
+    for(var i = 0x8000; i < 0x8010; i++) {
+        console.log(i.toString(16) + ' : ' + gbCpu.memory.readByte(i).toString(16));
     }
 
   }
