@@ -336,4 +336,21 @@ var extendedInstructions = {
   '3d': require('./instructions/0xcb3d'), // srl l
   '3e': require('./instructions/0xcb3e'), // srl [hl]
   '3f': require('./instructions/0xcb3f'), // srl a
+
+  '80': require('./instructions/0xcb80'), // res 0, b
+  '81': require('./instructions/0xcb81'), // res 0, c
+  '82': require('./instructions/0xcb82'), // res 0, d
+  '83': require('./instructions/0xcb83'), // res 0, e
+  '84': require('./instructions/0xcb84'), // res 0, h
+  '85': require('./instructions/0xcb85'), // res 0, l
+  '86': require('./instructions/0xcb86'), // res 0, [hl]
+  '87': require('./instructions/0xcb87'), // res 0, a
+  '88': require('./instructions/0xcb88'), // res 1, b
+  '89': require('./instructions/0xcb89'), // res 1, c
+  '8a': require('./instructions/0xcb8a'), // res 1, d
+  '8b': require('./instructions/0xcb8b'), // res 1, e
+  '8c': require('./instructions/0xcb8c'), // res 1, h
+  '8d': require('./instructions/0xcb8d'), // res 1, l
+  '8e': require('./instructions/0xcb8e'), // res 1, [hl]
+  '8f': require('./instructions/0xcb8f'), // res 1, a
 };
