@@ -344,7 +344,7 @@ var extendedInstructions = {
   '84': require('./instructions/0xcb84'), // res 0, h
   '85': require('./instructions/0xcb85'), // res 0, l
   '86': require('./instructions/0xcb86'), // res 0, [hl]
-  
+
   '87': require('./instructions/0xcb87'), // res 0, a
   '88': require('./instructions/0xcb88'), // res 1, b
   '89': require('./instructions/0xcb89'), // res 1, c
@@ -408,4 +408,13 @@ var extendedInstructions = {
   'bd': require('./instructions/0xcbbd'), // res 7, l
   'be': require('./instructions/0xcbbe'), // res 7, [hl]
   'bf': require('./instructions/0xcbbf'), // res 7, a
+
+  'c0': require('./instructions/0xcbc0'), // set 0, b
+  'c1': require('./instructions/0xcbc1'), // set 0, c
+  'c2': require('./instructions/0xcbc2'), // set 0, d
+  'c3': require('./instructions/0xcbc3'), // set 0, e
+  'c4': require('./instructions/0xcbc4'), // set 0, h
+  'c5': require('./instructions/0xcbc5'), // set 0, l
+  'c6': require('./instructions/0xcbc6'), // set 0, [hl]
+  'c7': require('./instructions/0xcbc7'), // set 0, a
 };
