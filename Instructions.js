@@ -417,4 +417,13 @@ var extendedInstructions = {
   'c5': require('./instructions/0xcbc5'), // set 0, l
   'c6': require('./instructions/0xcbc6'), // set 0, [hl]
   'c7': require('./instructions/0xcbc7'), // set 0, a
+
+  'c8': require('./instructions/0xcbc8'), // set 1, b
+  'c9': require('./instructions/0xcbc9'), // set 1, c
+  'ca': require('./instructions/0xcbca'), // set 1, d
+  'cb': require('./instructions/0xcbcb'), // set 1, e
+  'cc': require('./instructions/0xcbcc'), // set 1, h
+  'cd': require('./instructions/0xcbcd'), // set 1, l
+  'ce': require('./instructions/0xcbce'), // set 1, [hl]
+  'cf': require('./instructions/0xcbcf'), // set 1, a
 };
