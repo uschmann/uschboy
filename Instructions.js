@@ -344,6 +344,7 @@ var extendedInstructions = {
   '84': require('./instructions/0xcb84'), // res 0, h
   '85': require('./instructions/0xcb85'), // res 0, l
   '86': require('./instructions/0xcb86'), // res 0, [hl]
+  
   '87': require('./instructions/0xcb87'), // res 0, a
   '88': require('./instructions/0xcb88'), // res 1, b
   '89': require('./instructions/0xcb89'), // res 1, c
@@ -353,4 +354,58 @@ var extendedInstructions = {
   '8d': require('./instructions/0xcb8d'), // res 1, l
   '8e': require('./instructions/0xcb8e'), // res 1, [hl]
   '8f': require('./instructions/0xcb8f'), // res 1, a
+
+  '90': require('./instructions/0xcb90'), // res 2, b
+  '91': require('./instructions/0xcb91'), // res 2, c
+  '92': require('./instructions/0xcb92'), // res 2, d
+  '93': require('./instructions/0xcb93'), // res 2, e
+  '94': require('./instructions/0xcb94'), // res 2, h
+  '95': require('./instructions/0xcb95'), // res 2, l
+  '96': require('./instructions/0xcb96'), // res 2, [hl]
+  '97': require('./instructions/0xcb97'), // res 2, a
+
+  '98': require('./instructions/0xcb98'), // res 3, b
+  '99': require('./instructions/0xcb99'), // res 3, c
+  '9a': require('./instructions/0xcb9a'), // res 3, d
+  '9b': require('./instructions/0xcb9b'), // res 3, e
+  '9c': require('./instructions/0xcb9c'), // res 3, h
+  '9d': require('./instructions/0xcb9d'), // res 3, l
+  '9e': require('./instructions/0xcb9e'), // res 3, [hl]
+  '9f': require('./instructions/0xcb9f'), // res 3, a
+
+  'a0': require('./instructions/0xcba0'), // res 4, b
+  'a1': require('./instructions/0xcba1'), // res 4, c
+  'a2': require('./instructions/0xcba2'), // res 4, d
+  'a3': require('./instructions/0xcba3'), // res 4, e
+  'a4': require('./instructions/0xcba4'), // res 4, h
+  'a5': require('./instructions/0xcba5'), // res 4, l
+  'a6': require('./instructions/0xcba6'), // res 4, [hl]
+  'a7': require('./instructions/0xcba7'), // res 4, a
+
+  'a8': require('./instructions/0xcba8'), // res 5, b
+  'a9': require('./instructions/0xcba9'), // res 5, c
+  'aa': require('./instructions/0xcbaa'), // res 5, d
+  'ab': require('./instructions/0xcbab'), // res 5, e
+  'ac': require('./instructions/0xcbac'), // res 5, h
+  'ad': require('./instructions/0xcbad'), // res 5, l
+  'ae': require('./instructions/0xcbae'), // res 5, [hl]
+  'af': require('./instructions/0xcbaf'), // res 5, a
+
+  'b0': require('./instructions/0xcbb0'), // res 6, b
+  'b1': require('./instructions/0xcbb1'), // res 6, c
+  'b2': require('./instructions/0xcbb2'), // res 6, d
+  'b3': require('./instructions/0xcbb3'), // res 6, e
+  'b4': require('./instructions/0xcbb4'), // res 6, h
+  'b5': require('./instructions/0xcbb5'), // res 6, l
+  'b6': require('./instructions/0xcbb6'), // res 6, [hl]
+  'b7': require('./instructions/0xcbb7'), // res 6, a
+
+  'b8': require('./instructions/0xcbb8'), // res 7, b
+  'b9': require('./instructions/0xcbb9'), // res 7, c
+  'ba': require('./instructions/0xcbba'), // res 7, d
+  'bb': require('./instructions/0xcbbb'), // res 7, e
+  'bc': require('./instructions/0xcbbc'), // res 7, h
+  'bd': require('./instructions/0xcbbd'), // res 7, l
+  'be': require('./instructions/0xcbbe'), // res 7, [hl]
+  'bf': require('./instructions/0xcbbf'), // res 7, a
 };
