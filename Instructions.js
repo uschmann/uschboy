@@ -336,7 +336,6 @@ var extendedInstructions = {
   '3d': require('./instructions/0xcb3d'), // srl l
   '3e': require('./instructions/0xcb3e'), // srl [hl]
   '3f': require('./instructions/0xcb3f'), // srl a
-
   '40': require('./instructions/0xcb40'), // bit 0, b
   '41': require('./instructions/0xcb41'), // bit 0, c
   '42': require('./instructions/0xcb42'), // bit 0, d
@@ -345,7 +344,6 @@ var extendedInstructions = {
   '45': require('./instructions/0xcb45'), // bit 0, l
   '46': require('./instructions/0xcb46'), // bit 0, [hl]
   '47': require('./instructions/0xcb47'), // bit 0, a
-
   '48': require('./instructions/0xcb48'), // bit 1, b
   '49': require('./instructions/0xcb49'), // bit 1, c
   '4a': require('./instructions/0xcb4a'), // bit 1, d
@@ -354,7 +352,6 @@ var extendedInstructions = {
   '4d': require('./instructions/0xcb4d'), // bit 1, l
   '4e': require('./instructions/0xcb4e'), // bit 1, [hl]
   '4f': require('./instructions/0xcb4f'), // bit 1, a
-
   '50': require('./instructions/0xcb50'), // bit 2, b
   '51': require('./instructions/0xcb51'), // bit 2, c
   '52': require('./instructions/0xcb52'), // bit 2, d
@@ -363,7 +360,6 @@ var extendedInstructions = {
   '55': require('./instructions/0xcb55'), // bit 2, l
   '56': require('./instructions/0xcb56'), // bit 2, [hl]
   '57': require('./instructions/0xcb57'), // bit 2, a
-
   '58': require('./instructions/0xcb58'), // bit 3, b
   '59': require('./instructions/0xcb59'), // bit 3, c
   '5a': require('./instructions/0xcb5a'), // bit 3, d
@@ -372,7 +368,6 @@ var extendedInstructions = {
   '5d': require('./instructions/0xcb5d'), // bit 3, l
   '5e': require('./instructions/0xcb5e'), // bit 3, [hl]
   '5f': require('./instructions/0xcb5f'), // bit 3, a
-
   '60': require('./instructions/0xcb60'), // bit 4, b
   '61': require('./instructions/0xcb61'), // bit 4, c
   '62': require('./instructions/0xcb62'), // bit 4, d
@@ -381,7 +376,6 @@ var extendedInstructions = {
   '65': require('./instructions/0xcb65'), // bit 4, l
   '66': require('./instructions/0xcb66'), // bit 4, [hl]
   '67': require('./instructions/0xcb67'), // bit 4, a
-
   '68': require('./instructions/0xcb68'), // bit 5, b
   '69': require('./instructions/0xcb69'), // bit 5, c
   '6a': require('./instructions/0xcb6a'), // bit 5, d
@@ -390,7 +384,6 @@ var extendedInstructions = {
   '6d': require('./instructions/0xcb6d'), // bit 5, l
   '6e': require('./instructions/0xcb6e'), // bit 5, [hl]
   '6f': require('./instructions/0xcb6f'), // bit 5, a
-
   '70': require('./instructions/0xcb70'), // bit 6, b
   '71': require('./instructions/0xcb71'), // bit 6, c
   '72': require('./instructions/0xcb72'), // bit 6, d
@@ -399,7 +392,6 @@ var extendedInstructions = {
   '75': require('./instructions/0xcb75'), // bit 6, l
   '76': require('./instructions/0xcb76'), // bit 6, [hl]
   '77': require('./instructions/0xcb77'), // bit 6, a
-
   '78': require('./instructions/0xcb78'), // bit 7, b
   '79': require('./instructions/0xcb79'), // bit 7, c
   '7a': require('./instructions/0xcb7a'), // bit 7, d
@@ -408,7 +400,6 @@ var extendedInstructions = {
   '7d': require('./instructions/0xcb7d'), // bit 7, l
   '7e': require('./instructions/0xcb7e'), // bit 7, [hl]
   '7f': require('./instructions/0xcb7f'), // bit 7, a
-
   '80': require('./instructions/0xcb80'), // res 0, b
   '81': require('./instructions/0xcb81'), // res 0, c
   '82': require('./instructions/0xcb82'), // res 0, d
@@ -416,7 +407,6 @@ var extendedInstructions = {
   '84': require('./instructions/0xcb84'), // res 0, h
   '85': require('./instructions/0xcb85'), // res 0, l
   '86': require('./instructions/0xcb86'), // res 0, [hl]
-
   '87': require('./instructions/0xcb87'), // res 0, a
   '88': require('./instructions/0xcb88'), // res 1, b
   '89': require('./instructions/0xcb89'), // res 1, c
@@ -426,7 +416,6 @@ var extendedInstructions = {
   '8d': require('./instructions/0xcb8d'), // res 1, l
   '8e': require('./instructions/0xcb8e'), // res 1, [hl]
   '8f': require('./instructions/0xcb8f'), // res 1, a
-
   '90': require('./instructions/0xcb90'), // res 2, b
   '91': require('./instructions/0xcb91'), // res 2, c
   '92': require('./instructions/0xcb92'), // res 2, d
@@ -435,7 +424,6 @@ var extendedInstructions = {
   '95': require('./instructions/0xcb95'), // res 2, l
   '96': require('./instructions/0xcb96'), // res 2, [hl]
   '97': require('./instructions/0xcb97'), // res 2, a
-
   '98': require('./instructions/0xcb98'), // res 3, b
   '99': require('./instructions/0xcb99'), // res 3, c
   '9a': require('./instructions/0xcb9a'), // res 3, d
@@ -444,7 +432,6 @@ var extendedInstructions = {
   '9d': require('./instructions/0xcb9d'), // res 3, l
   '9e': require('./instructions/0xcb9e'), // res 3, [hl]
   '9f': require('./instructions/0xcb9f'), // res 3, a
-
   'a0': require('./instructions/0xcba0'), // res 4, b
   'a1': require('./instructions/0xcba1'), // res 4, c
   'a2': require('./instructions/0xcba2'), // res 4, d
@@ -453,7 +440,6 @@ var extendedInstructions = {
   'a5': require('./instructions/0xcba5'), // res 4, l
   'a6': require('./instructions/0xcba6'), // res 4, [hl]
   'a7': require('./instructions/0xcba7'), // res 4, a
-
   'a8': require('./instructions/0xcba8'), // res 5, b
   'a9': require('./instructions/0xcba9'), // res 5, c
   'aa': require('./instructions/0xcbaa'), // res 5, d
@@ -462,7 +448,6 @@ var extendedInstructions = {
   'ad': require('./instructions/0xcbad'), // res 5, l
   'ae': require('./instructions/0xcbae'), // res 5, [hl]
   'af': require('./instructions/0xcbaf'), // res 5, a
-
   'b0': require('./instructions/0xcbb0'), // res 6, b
   'b1': require('./instructions/0xcbb1'), // res 6, c
   'b2': require('./instructions/0xcbb2'), // res 6, d
@@ -471,7 +456,6 @@ var extendedInstructions = {
   'b5': require('./instructions/0xcbb5'), // res 6, l
   'b6': require('./instructions/0xcbb6'), // res 6, [hl]
   'b7': require('./instructions/0xcbb7'), // res 6, a
-
   'b8': require('./instructions/0xcbb8'), // res 7, b
   'b9': require('./instructions/0xcbb9'), // res 7, c
   'ba': require('./instructions/0xcbba'), // res 7, d
@@ -480,7 +464,6 @@ var extendedInstructions = {
   'bd': require('./instructions/0xcbbd'), // res 7, l
   'be': require('./instructions/0xcbbe'), // res 7, [hl]
   'bf': require('./instructions/0xcbbf'), // res 7, a
-
   'c0': require('./instructions/0xcbc0'), // set 0, b
   'c1': require('./instructions/0xcbc1'), // set 0, c
   'c2': require('./instructions/0xcbc2'), // set 0, d
@@ -489,7 +472,6 @@ var extendedInstructions = {
   'c5': require('./instructions/0xcbc5'), // set 0, l
   'c6': require('./instructions/0xcbc6'), // set 0, [hl]
   'c7': require('./instructions/0xcbc7'), // set 0, a
-
   'c8': require('./instructions/0xcbc8'), // set 1, b
   'c9': require('./instructions/0xcbc9'), // set 1, c
   'ca': require('./instructions/0xcbca'), // set 1, d
@@ -498,7 +480,6 @@ var extendedInstructions = {
   'cd': require('./instructions/0xcbcd'), // set 1, l
   'ce': require('./instructions/0xcbce'), // set 1, [hl]
   'cf': require('./instructions/0xcbcf'), // set 1, a
-
   'd0': require('./instructions/0xcbd0'), // set 2, b
   'd1': require('./instructions/0xcbd1'), // set 2, c
   'd2': require('./instructions/0xcbd2'), // set 2, d
@@ -507,7 +488,6 @@ var extendedInstructions = {
   'd5': require('./instructions/0xcbd5'), // set 2, l
   'd6': require('./instructions/0xcbd6'), // set 2, [hl]
   'd7': require('./instructions/0xcbd7'), // set 2, a
-
   'd8': require('./instructions/0xcbd8'), // set 3, b
   'd9': require('./instructions/0xcbd9'), // set 3, c
   'da': require('./instructions/0xcbda'), // set 3, d
@@ -516,7 +496,6 @@ var extendedInstructions = {
   'dd': require('./instructions/0xcbdd'), // set 3, l
   'de': require('./instructions/0xcbde'), // set 3, [hl]
   'df': require('./instructions/0xcbdf'), // set 3, a
-
   'e0': require('./instructions/0xcbe0'), // set 4, b
   'e1': require('./instructions/0xcbe1'), // set 4, c
   'e2': require('./instructions/0xcbe2'), // set 4, d
@@ -525,7 +504,6 @@ var extendedInstructions = {
   'e5': require('./instructions/0xcbe5'), // set 4, l
   'e6': require('./instructions/0xcbe6'), // set 4, [hl]
   'e7': require('./instructions/0xcbe7'), // set 4, a
-
   'e8': require('./instructions/0xcbe8'), // set 5, b
   'e9': require('./instructions/0xcbe9'), // set 5, c
   'ea': require('./instructions/0xcbea'), // set 5, d
@@ -534,7 +512,6 @@ var extendedInstructions = {
   'ed': require('./instructions/0xcbed'), // set 5, l
   'ee': require('./instructions/0xcbee'), // set 5, [hl]
   'ef': require('./instructions/0xcbef'), // set 5, a
-
   'f0': require('./instructions/0xcbf0'), // set 6, b
   'f1': require('./instructions/0xcbf1'), // set 6, c
   'f2': require('./instructions/0xcbf2'), // set 6, d
@@ -543,7 +520,6 @@ var extendedInstructions = {
   'f5': require('./instructions/0xcbf5'), // set 6, l
   'f6': require('./instructions/0xcbf6'), // set 6, [hl]
   'f7': require('./instructions/0xcbf7'), // set 6, a
-
   'f8': require('./instructions/0xcbf8'), // set 7, b
   'f9': require('./instructions/0xcbf9'), // set 7, c
   'fa': require('./instructions/0xcbfa'), // set 7, d
