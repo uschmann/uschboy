@@ -391,6 +391,15 @@ var extendedInstructions = {
   '6e': require('./instructions/0xcb6e'), // bit 5, [hl]
   '6f': require('./instructions/0xcb6f'), // bit 5, a
 
+  '70': require('./instructions/0xcb70'), // bit 6, b
+  '71': require('./instructions/0xcb71'), // bit 6, c
+  '72': require('./instructions/0xcb72'), // bit 6, d
+  '73': require('./instructions/0xcb73'), // bit 6, e
+  '74': require('./instructions/0xcb74'), // bit 6, h
+  '75': require('./instructions/0xcb75'), // bit 6, l
+  '76': require('./instructions/0xcb76'), // bit 6, [hl]
+  '77': require('./instructions/0xcb77'), // bit 6, a
+
   '80': require('./instructions/0xcb80'), // res 0, b
   '81': require('./instructions/0xcb81'), // res 0, c
   '82': require('./instructions/0xcb82'), // res 0, d
