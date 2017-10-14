@@ -1,6 +1,7 @@
 var readlineSync = require('readline-sync');
 const GbCpu = require('./GbCpu');
 const GbMemory = require('./GbMemory');
+const GPU = require('./GPU');
 
 const filename = process.argv.length > 2 ? process.argv[2] : '../dmg-start/build/main.gb';
 console.log(filename);
@@ -8,15 +9,17 @@ console.log(filename);
 function onLoad(rom) {
   var isRunning = true;
   var isDebugging = true;
-  var gbCpu = new GbCpu(new GbMemory());
+
+  var gpu = new GPU();
+  var memory = new GbMemory(gpu);
+  var gbCpu = new GbCpu(memory, gpu);
 
   gbCpu.loadRom(rom);
   var i = 0;
   while(isRunning) {
-
-    console.log(`${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}`);
+    //console.log(`${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}`);
     gbCpu.step();
-    printRegs(gbCpu);
+    //printRegs(gbCpu);
     if(isDebugging) {
       var input = readlineSync.question('>').split(' ');
       var cmd = input[0];

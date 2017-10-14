@@ -1,8 +1,11 @@
 'use strict';
 
+const registers = require('./Registers');
+
 class GbMemory {
 
-  constructor() {
+  constructor(gpu) {
+    this.gpu = gpu;
     this.rom = [];
     this.data = [];
     for(var i=0; i<0xFFFF; i++) {
@@ -20,8 +23,8 @@ class GbMemory {
   }
 
   readByte(addr) {
-    if(addr == 0xff44) {
-      return 0x94;
+    if(addr == registers.LCD_LINE_Y) {
+      return this.gpu.line & 0xFF;
     }
 
     return this.data[addr];
@@ -33,6 +36,7 @@ class GbMemory {
 
   writeByte(addr, value) {
     addr &= 0xFFFF;
+
     this.data[addr] = value;
   }
 

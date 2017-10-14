@@ -9,8 +9,9 @@ const BIT_ZERO = 7;
 
 class GbCpu {
 
-  constructor(memory) {
+  constructor(memory, gpu) {
     this.memory = memory;
+    this.gpu = gpu;
     this.reset();
   }
 
@@ -32,7 +33,9 @@ class GbCpu {
 
   step() {
     const instruction = this.fetchInstruction();
-    this._cycles += instruction.execute(this);
+    const cycles = instruction.execute(this)
+    this.gpu.step(cycles);
+    this._cycles += cycles;
     return instruction;
     // TODO: process timer
     // TODO: process interupts
