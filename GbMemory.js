@@ -23,19 +23,42 @@ class GbMemory {
   }
 
   readByte(addr) {
+    // GPU
+    if(addr == registers.LCD_CONTROL) {
+      return this.gpu.control & 0xFF;
+    }
     if(addr == registers.LCD_LINE_Y) {
       return this.gpu.line & 0xFF;
+    }
+    if(addr == registers.LCD_SCROLL_X) {
+      return this.gpu.scrollX & 0xFF;
+    }
+    if(addr == registers.LCD_SCROLL_Y) {
+      return this.gpu.scrollY & 0xFF;
     }
 
     return this.data[addr];
   }
 
   readWord(addr) {
-    return (this.data[addr] | (this.data[addr+1] << 8)) & 0xFFFF;
+    return (this.readByte(addr) | (this.readByte(addr+1) << 8)) & 0xFFFF;
   }
 
   writeByte(addr, value) {
     addr &= 0xFFFF;
+    // GPU
+    if(addr == registers.LCD_CONTROL) {
+      return this.gpu.setControl(value);
+    }
+    if(addr == registers.LCD_SCROLL_X) {
+      return this.gpu.scrollX = value;
+    }
+    if(addr == registers.LCD_SCROLL_Y) {
+      return this.gpu.scrollY = value;
+    }
+    if(addr == registers.LCD_BACKGROUND_PAL) {
+      return this.gpu.setBackgroundPal(value);
+    }
 
     this.data[addr] = value;
   }

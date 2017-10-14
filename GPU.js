@@ -14,9 +14,17 @@ const NUMBER_OF_LINES_IN_V_BLANK = 10;
 class GPU {
 
   constructor() {
+    this.reset();
+  }
+
+  reset() {
     this.clock = 0;
     this.mode = MODE_OAM;
     this.line = 0;
+    this.scrollX = 0;
+    this.scrollY = 0;
+    this.control = 0;
+    this.backgroundPal = 0;
   }
 
   step(cycles) {
@@ -68,6 +76,15 @@ class GPU {
         }
         break;
     }
+  }
+
+  setBackgroundPal(val) {
+    this.backgroundPal = val;
+  }
+
+  setControl(val) {
+    this.control = val;
+    console.log('Controle: ' + val.toString(16));
   }
 
 }
