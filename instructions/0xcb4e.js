@@ -1,11 +1,11 @@
 module.exports = {
-  name: 'bit 0, [hl]',
-  opcode: 'cb46',
+  name: 'bit 1, [hl]',
+  opcode: 'cb4e',
   cycles: 16,
   execute(cpu) {
     var addr = (cpu.regs.h << 8 | cpu.regs.l) & 0xFFFF;
 
-    (cpu.memory.readByte(addr) & (1 << 0)) == 0 ? cpu.setZero() : cpu.resetZero();
+    (cpu.memory.readByte(addr) & (1 << 1)) == 0 ? cpu.setZero() : cpu.resetZero();
     cpu.resetSubtract();
     cpu.setHalfCarry();
 
@@ -13,6 +13,6 @@ module.exports = {
     return 16;
   },
   disasm(cpu) {
-    return 'bit 0, [hl]';
+    return 'bit 1, [hl]';
   }
 };
