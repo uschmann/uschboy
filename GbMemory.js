@@ -60,6 +60,12 @@ class GbMemory {
       return this.gpu.setBackgroundPal(value);
     }
 
+    if(addr >= 0x8000 && addr < 0xa000) {
+      this.gpu.vram[addr & 0x1FFF] = value;
+      if(addr < 0x9800) {
+          this.gpu.updateTile(addr, value);
+      }
+    }
     this.data[addr] = value;
   }
 

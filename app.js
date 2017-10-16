@@ -16,8 +16,17 @@ function onLoad(rom) {
 
   gbCpu.loadRom(rom);
   var i = 0;
+
+  setInterval(() => {
+    var fclck = gbCpu._cycles + 70224;
+    do {
+      gbCpu.step();
+    }while(gbCpu._cycles < fclck);
+  }, 10);
+  return;
+
   while(isRunning) {
-    console.log(`${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}`);
+    //console.log(`${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}`);
     gbCpu.step();
     //printRegs(gbCpu);
     if(isDebugging) {
