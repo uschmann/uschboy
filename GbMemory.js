@@ -4,8 +4,9 @@ const registers = require('./Registers');
 
 class GbMemory {
 
-  constructor(gpu) {
+  constructor(gpu, buttons) {
     this.gpu = gpu;
+    this.buttons = buttons;
     this.rom = [];
     this.data = [];
     for(var i=0; i<0xFFFF; i++) {
@@ -35,6 +36,14 @@ class GbMemory {
     }
     if(addr == registers.LCD_SCROLL_Y) {
       return this.gpu.scrollY & 0xFF;
+    }
+    if(addr == registers.LCD_BACKGROUND_PAL) {
+      return this.gpu.readBackgroundPal();
+    }
+
+    // buttons
+    if(addr == 0xFF00) {
+      return this.buttons.readP1();
     }
 
     return this.data[addr];
@@ -66,6 +75,11 @@ class GbMemory {
           this.gpu.updateTile(addr, value);
       }
     }
+
+    if(addr == 0xFF00) {
+      this.buttons.writeP1(value);
+    }
+
     this.data[addr] = value;
   }
 

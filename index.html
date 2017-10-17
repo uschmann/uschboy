@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <canvas id="canvas" width="160" height="144">
+    </canvas>
+    <input id="fileDialog" type="file"/>
+    <button id="reset">Reset</button>
+
+
+    <script>
+    const filename = '../monostack/build/main.gb';
+    const GbCpu = require('./GbCpu');
+    const GbMemory = require('./GbMemory');
+    const GPU = require('./GPU');
+    const Buttons = require('./Buttons');
+
+    const context = document.getElementById('canvas').getContext('2d');
+    var chooser = document.querySelector("#fileDialog");
+    var fs = require('fs');
+
+    let gpu = null;
+    let buttons = null;
+    let memory = null;
+    let gbCpu = null;
+    let interval = null;
+
+    document.getElementById('reset').addEventListener('click', reset);
+
+    chooser.addEventListener("change", function(evt) {
+      const filename = this.value;
+      fs.readFile(filename, function(status, data) {
+          if (status) {
+              console.log(status.message);
+              return;
+          }
+          var rom = [];
+          for(var i=0; i<data.length; i++) {
+            rom.push(data.readUInt8(i));
+          }
+          onLoad(rom);
+      });
+    }, false);
+
+    function onLoad(rom) {
+        clearInterval(interval);
+        
+        gpu = new GPU(context);
+        buttons = new Buttons(document);
+        memory = new GbMemory(gpu, buttons);
+        gbCpu = new GbCpu(memory, gpu);
+
+        gbCpu.loadRom(rom);
+
+        setInterval(() => {
+          var fclck = gbCpu._cycles + 70224;
+          while(gbCpu._cycles < fclck) {
+            //str += `${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}\n`;
+            gbCpu.step();
+          }
+        }, 1000 / 60);
+    }
+
+    function reset() {
+      gbCpu.reset();
+      gpu.reset();
+    }
+
+    </script>
+  </body>
+</html>

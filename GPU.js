@@ -11,11 +11,10 @@ const DURATION_V_BLANK = 4560;
 
 const NUMBER_OF_LINES_IN_V_BLANK = 10;
 
-var ctx = require('axel');
-const Jimp = require('Jimp');
 class GPU {
 
-  constructor() {
+  constructor(context) {
+    this.context = context;
     this.reset();
   }
 
@@ -56,11 +55,7 @@ class GPU {
     }
 
     // framebuffer
-    this.scrn = {
-        width: 160,
-        height: 144,
-        data: new Array(160 * 144 * 4)
-    };
+    this.scrn = this.context.createImageData(160, 144);
     for(var i=0; i<160*144*4; i++) {
         this.scrn.data[i] = 255;
     }
@@ -98,27 +93,8 @@ class GPU {
           if(this.line == 143) {
             this.mode = MODE_V_BLANK;
             // A full frame is rendered here
-            //console.log('V_BLANK');
-            //if(false) {
             if(this.switchLcd) {
-              this.img ++;
-              var img = this.img;
-              var scrn = this.scrn;
-              let image = new Jimp(160, 144, function (err, image) {
-                if (err) throw err;
-
-                for(var y = 0; y < 144; y++) {
-                  for(var x = 0; x < 160; x++) {
-                    var color = 0;
-                    image.setPixelColor(Jimp.rgbaToInt(scrn.data[(y * 160 * 4) + x * 4], scrn.data[y * 160 * 4 + (x *4 ) + 1], scrn.data[y * 160 * 4 + (x * 4) +2], scrn.data[y * 160 * 4 + (x *4) + 3]), x, y);
-                  }
-                }
-
-                image.write('out/' +img + '.png', (err) => {
-                  if (err) throw err;
-                  console.log('Rendered frame');
-                });
-              });
+              this.context.putImageData(this.scrn, 0, 0);
             }
 
           }
@@ -165,14 +141,6 @@ class GPU {
 	var colour;
 	var tile = this.vram[mapoffs + lineoffs];
 
-
-/*
-  if(mapoffs + lineoffs == 0x18e0) {
-    console.log(tile.toString(16));
-    console.log((mapoffs + lineoffs).toString(16));
-    console.log(this.tileset[tile]);
-  }
-*/
   // If the tile data set in use is #1, the
 	// indices are signed; calculate a real tile offset
   if(this.bgTile == 1 && tile < 128) {
@@ -212,6 +180,10 @@ class GPU {
         case 3: this.bgPal[i] = [  0,  0,  0,255]; break;
       }
 		}
+  }
+
+  readBackgroundPal() {
+    return this.backgroundPal;
   }
 
   setControl(val) {
