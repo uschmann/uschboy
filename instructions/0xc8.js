@@ -8,7 +8,7 @@ module.exports = {
       cpu.regs.sp = (cpu.regs.sp + 2) & 0xFFFF;
     }
     else {
-      cpu.regs.cp = (cpu.regs.cp + 1) & 0xFFFF;
+      cpu.regs.pc = (cpu.regs.pc + 1) & 0xFFFF;
     }
 
     return 8;

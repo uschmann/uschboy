@@ -20,6 +20,7 @@ function onLoad(rom) {
   setInterval(() => {
     var fclck = gbCpu._cycles + 70224;
     do {
+      //console.log(`${gbCpu.regs.pc.toString(16)} : ${gbCpu.fetchInstruction().disasm(gbCpu)}`);
       gbCpu.step();
     }while(gbCpu._cycles < fclck);
   }, 10);

@@ -68,10 +68,6 @@ class GPU {
   }
 
   step(cycles) {
-    if(this.switchLcd !== 1) {
-      return;
-    }
-
     this.clock += cycles;
 
     switch(this.mode) {
@@ -105,7 +101,8 @@ class GPU {
             //console.log('V_BLANK');
             //if(false) {
             if(this.switchLcd) {
-
+              this.img ++;
+              var img = this.img;
               var scrn = this.scrn;
               let image = new Jimp(160, 144, function (err, image) {
                 if (err) throw err;
@@ -117,8 +114,9 @@ class GPU {
                   }
                 }
 
-                image.write('test.png', (err) => {
+                image.write('out/' +img + '.png', (err) => {
                   if (err) throw err;
+                  console.log('Rendered frame');
                 });
               });
             }
